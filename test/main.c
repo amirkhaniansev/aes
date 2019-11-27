@@ -54,13 +54,13 @@ int main(int argc, char** argv)
 
 		size_t size = sizeof(plaintext) / sizeof(plaintext[0x0]);
 
-        printf("ORIGINAL : %s", plaintext);
+        printf("ORIGINAL : %s\n", plaintext);
 
 		char* cyphertext = aes_128_encrypt(key, nonce, plaintext, size);
-        printf("CYPHERTEXT : %s", cyphertext);
+        printf("CYPHERTEXT : %s\n", cyphertext);
 
 		char* original = aes_128_decrypt(key, nonce, cyphertext, 576);
-        printf("ORIGINAL : %s", original);
+        printf("ORIGINAL : %s\n", original);
 
 		free(nonce);
 		free(key);
